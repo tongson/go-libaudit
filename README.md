@@ -1,5 +1,5 @@
 
-# This forks adds a auditctl command that replicates the 'delete all rules' `-D` command from the audit tools.
+# This fork adds an `auditctl` command which at the moment only replicates the 'delete all rules' `-D` command from the audit userspace tools.
 
 
 # go-libaudit
