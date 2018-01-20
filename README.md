@@ -1,3 +1,7 @@
+
+# This forks adds a auditctl command that replicates the 'delete all rules' `-D` command from the audit tools.
+
+
 # go-libaudit
 
 [![Build Status](http://img.shields.io/travis/elastic/go-libaudit.svg?style=flat-square)][travis]
