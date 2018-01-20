@@ -7,14 +7,14 @@ import (
 	"io"
 	"os"
 
-	"github.com/pkg/errors"
 	"github.com/elastic/go-libaudit"
+	"github.com/pkg/errors"
 )
 
 var (
-	fs		= flag.NewFlagSet("auditctl", flag.ExitOnError)
-	del		= fs.Bool("D", false, "delete all rules")
-	list	= fs.Bool("l", false, "list rules")
+	fs   = flag.NewFlagSet("auditctl", flag.ExitOnError)
+	del  = fs.Bool("D", false, "delete all rules")
+	list = fs.Bool("l", false, "list rules")
 )
 
 func main() {
@@ -26,11 +26,11 @@ func main() {
 	if *del {
 		if err := deleteRules(); err != nil {
 			fmt.Fprintf(os.Stderr, "error: %v\n", err)
-		    os.Exit(1)
+			os.Exit(1)
 		}
 	}
 	if *list {
-		if err:= listRules(); err != nil {
+		if err := listRules(); err != nil {
 			fmt.Fprintf(os.Stderr, "error: %v\n", err)
 			os.Exit(1)
 		}
@@ -72,6 +72,6 @@ func listRules() error {
 	}
 	for i, rule := range rules {
 		fmt.Fprintf(os.Stdout, "rule %v:\n%v\n", i, hex.EncodeToString(rule))
-    }
+	}
 	return nil
 }
